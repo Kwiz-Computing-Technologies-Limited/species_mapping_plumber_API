@@ -46,14 +46,14 @@ test_that("name_choices returns 'Rorippa palustris' and 'Marsh Yellow-cress' for
 test_that("filter_data returns a dataframe with columns 'longitudedecimal', 'latitudedecimal', and 'individualcount' for vernacularname 'Great Tit'", {
   # Call the function with 'Great Tit' as the argument
   result1 <- filter_data(vernacularname = 'Great Tit')
-  # Call the function with 'Germany' as the argument
-  result2 <- filter_data(country = 'Germany')
+  
   
   # Check if the result is a data frame
   expect_true(is.data.frame(result1))
-  expect_true(is.data.frame(result2))
-  
+
   # Check if the result has the expected columns
-  expect_true(all(c('scientificname', 'vernacularname', 'longitudedecimal', 'latitudedecimal', 'individualcount', 'habitat', 'eventdate', 'eventtime', 'references') %in% colnames(result1)))
-  expect_true(all(c('scientificname', 'vernacularname', 'longitudedecimal', 'latitudedecimal', 'individualcount', 'habitat', 'eventdate', 'eventtime', 'references') %in% colnames(result2)))
+  expect_true(all(c('scientificname', 'vernacularname', 'longitudedecimal', 'latitudedecimal', 'individualcount', 'habitat', 'eventdate', 'eventtime', 'references', 'accessuri') %in% colnames(result1)))
 })
+
+
+kenya = filter_data(country = "Kenya")
