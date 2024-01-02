@@ -14,9 +14,6 @@ box::use(
   RColorBrewer[brewer.pal]
 )
 
-# Set environment variables
-define_env()
-
 #* list of continents
 #* @get /continents
 #* @serializer text

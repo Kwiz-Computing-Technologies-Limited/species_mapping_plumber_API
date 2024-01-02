@@ -8,14 +8,6 @@ box::use(
   glue
 )
 
-#* Set environment variables
-define_env <- function() {
-  Sys.setenv(
-    AWS_ACCESS_KEY_ID = "AKIAYHNLKK7CPEECBD64",
-    AWS_SECRET_ACCESS_KEY = "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",
-    AWS_DEFAULT_REGION = "us-east-1"
-  )
-}
 
 #* create athena connection
 connection <- function() {
